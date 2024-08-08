@@ -1,0 +1,5 @@
+Error opening file "/Users/creator/Documents/DEV/Ai Platform/cloudflare/backend/windmill-api/openapi.yaml" 
+ENOENT: no such file or directory, open '/Users/creator/Documents/DEV/Ai Platform/cloudflare/backend/windmill-api/openapi.yaml'
+JSONParserError: Error opening file "/Users/creator/Documents/DEV/Ai Platform/cloudflare/backend/windmill-api/openapi.yaml" 
+ENOENT: no such file or directory, open '/Users/creator/Documents/DEV/Ai Platform/cloudflare/backend/windmill-api/openapi.yaml'
+    at Object.read (/Users/creator/Documents/DEV/Ai Platform/cloudflare/windmill/node_modules/@apidevtools/json-schema-ref-parser/dist/lib/resolvers/file.js:61:19)
