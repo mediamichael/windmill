@@ -24,15 +24,30 @@ export class StackItem {
  * @property {Doc} [doc] The document that this UndoManager operates on. Only needed if typeScope is empty.
  */
 /**
+ * @typedef {Object} StackItemEvent
+ * @property {StackItem} StackItemEvent.stackItem
+ * @property {any} StackItemEvent.origin
+ * @property {'undo'|'redo'} StackItemEvent.type
+ * @property {Map<AbstractType<YEvent<any>>,Array<YEvent<any>>>} StackItemEvent.changedParentTypes
+ */
+/**
  * Fires 'stack-item-added' event when a stack item was added to either the undo- or
  * the redo-stack. You may store additional stack information via the
  * metadata property on `event.stackItem.meta` (it is a `Map` of metadata properties).
  * Fires 'stack-item-popped' event when a stack item was popped from either the
  * undo- or the redo-stack. You may restore the saved stack information from `event.stackItem.meta`.
  *
- * @extends {Observable<'stack-item-added'|'stack-item-popped'|'stack-cleared'|'stack-item-updated'>}
+ * @extends {ObservableV2<{'stack-item-added':function(StackItemEvent, UndoManager):void, 'stack-item-popped': function(StackItemEvent, UndoManager):void, 'stack-cleared': function({ undoStackCleared: boolean, redoStackCleared: boolean }):void, 'stack-item-updated': function(StackItemEvent, UndoManager):void }>}
  */
-export class UndoManager extends Observable<"stack-item-added" | "stack-item-popped" | "stack-cleared" | "stack-item-updated"> {
+export class UndoManager extends ObservableV2<{
+    'stack-item-added': (arg0: StackItemEvent, arg1: UndoManager) => void;
+    'stack-item-popped': (arg0: StackItemEvent, arg1: UndoManager) => void;
+    'stack-cleared': (arg0: {
+        undoStackCleared: boolean;
+        redoStackCleared: boolean;
+    }) => void;
+    'stack-item-updated': (arg0: StackItemEvent, arg1: UndoManager) => void;
+}> {
     /**
      * @param {AbstractType<any>|Array<AbstractType<any>>} typeScope Accepts either a single type, or an array of types
      * @param {UndoManagerOptions} options
@@ -61,6 +76,12 @@ export class UndoManager extends Observable<"stack-item-added" | "stack-item-pop
      */
     undoing: boolean;
     redoing: boolean;
+    /**
+     * The currently popped stack item if UndoManager.undoing or UndoManager.redoing
+     *
+     * @type {StackItem|null}
+     */
+    currStackItem: StackItem | null;
     lastChange: number;
     ignoreRemoteMapChanges: boolean;
     captureTimeout: number;
@@ -150,10 +171,17 @@ export type UndoManagerOptions = {
      */
     doc?: Doc | undefined;
 };
+export type StackItemEvent = {
+    stackItem: StackItem;
+    origin: any;
+    type: 'undo' | 'redo';
+    changedParentTypes: Map<AbstractType<YEvent<any>>, Array<YEvent<any>>>;
+};
 import { DeleteSet } from "./DeleteSet.js";
-import { Observable } from "lib0/observable";
+import { ObservableV2 } from "lib0/observable";
 import { AbstractType } from "../types/AbstractType.js";
 import { Doc } from "./Doc.js";
 import { Item } from "../structs/Item.js";
 import { Transaction } from "./Transaction.js";
+import { YEvent } from "./YEvent.js";
 //# sourceMappingURL=UndoManager.d.ts.map
