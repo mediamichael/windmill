@@ -2,6 +2,7 @@ import { sveltekit } from '@sveltejs/kit/vite'
 import { readFileSync } from 'fs'
 import { fileURLToPath } from 'url'
 import circleDependency from 'vite-plugin-circular-dependency'
+import { defineConfig } from 'vite';
 
 const file = fileURLToPath(new URL('package.json', import.meta.url))
 const json = readFileSync(file, 'utf8')
@@ -47,5 +48,10 @@ const config = {
 	},
 	assetsInclude: ['**/*.wasm']
 }
-
-export default config
+export default defineConfig({
+	resolve: {
+		alias: {
+		'vscode/extensions.js': './node_modules/vscode/extensions.js',
+		},
+	},
+});
