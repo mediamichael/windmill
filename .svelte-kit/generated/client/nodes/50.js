@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/user/login_callback/[client_name]/+page.svelte";

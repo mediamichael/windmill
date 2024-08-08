@@ -1,0 +1,186 @@
+{
+	"/(root)/(logged)": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)": [
+		"src/routes/+layout.js"
+	],
+	"/": [
+		"src/routes/+layout.js"
+	],
+	"/approve/[workspace]/[job]/[resume]/[hmac]": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/apps/add": [
+		"src/routes/(root)/(logged)/apps/add/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/apps/edit/[...path]": [
+		"src/routes/(root)/(logged)/apps/edit/[...path]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/apps/get_raw/[version]/[...path]": [
+		"src/routes/(root)/(logged)/apps/get_raw/[version]/[...path]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/apps/get/[...path]": [
+		"src/routes/(root)/(logged)/apps/get/[...path]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/audit_logs": [
+		"src/routes/(root)/(logged)/audit_logs/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/concurrency_groups": [
+		"src/routes/(root)/(logged)/concurrency_groups/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/deploy/[kind]/[...path]": [
+		"src/routes/(root)/(logged)/deploy/[kind]/[...path]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/dev": [
+		"src/routes/dev/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/embed_connect": [
+		"src/routes/(root)/embed_connect/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/flows/add": [
+		"src/routes/(root)/(logged)/flows/add/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/flows/dev": [
+		"src/routes/flows/dev/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/flows/edit/[...path]": [
+		"src/routes/(root)/(logged)/flows/edit/[...path]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/flows/get/[...path]": [
+		"src/routes/(root)/(logged)/flows/get/[...path]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/folders": [
+		"src/routes/(root)/(logged)/folders/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/groups": [
+		"src/routes/(root)/(logged)/groups/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/instance_groups": [
+		"src/routes/(root)/(logged)/instance_groups/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/kitchen_sink": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/oauth/callback_slack": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/oauth/callback_supabase": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/oauth/callback/[client_name]": [
+		"src/routes/+layout.js"
+	],
+	"/public/[workspace]/[...secret]": [
+		"src/routes/public/[workspace]/[...secret]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/resources": [
+		"src/routes/(root)/(logged)/resources/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/runs/[...path]": [
+		"src/routes/(root)/(logged)/runs/[...path]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/run/[...run]": [
+		"src/routes/(root)/(logged)/run/[...run]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/schedules": [
+		"src/routes/(root)/(logged)/schedules/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/scripts/add": [
+		"src/routes/(root)/(logged)/scripts/add/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/scripts/dev": [
+		"src/routes/scripts/dev/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/scripts/edit/[...path]": [
+		"src/routes/(root)/(logged)/scripts/edit/[...path]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/scripts/get/[...hash]": [
+		"src/routes/(root)/(logged)/scripts/get/[...hash]/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/test_dev_page": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/(user)": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/(user)/accept_invite": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/cli-success": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/cli": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/(user)/create_workspace": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/(user)/first-time": [
+		"src/routes/(root)/(logged)/user/(user)/first-time/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/(user)/instance_settings": [
+		"src/routes/+layout.js"
+	],
+	"/user/login_callback/[client_name]": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/(user)/login": [
+		"src/routes/(root)/(logged)/user/(user)/login/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/(user)/logout": [
+		"src/routes/(root)/(logged)/user/(user)/logout/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/user/(user)/workspaces": [
+		"src/routes/(root)/(logged)/user/(user)/workspaces/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/variables": [
+		"src/routes/(root)/(logged)/variables/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/view_graph": [
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/workers": [
+		"src/routes/(root)/(logged)/workers/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/workspace_settings": [
+		"src/routes/(root)/(logged)/workspace_settings/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/(root)/(logged)/workspace_settings/checkout": [
+		"src/routes/(root)/(logged)/workspace_settings/checkout/+page.js",
+		"src/routes/+layout.js"
+	]
+}

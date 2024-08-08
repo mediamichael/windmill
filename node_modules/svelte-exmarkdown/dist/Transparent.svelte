@@ -1,0 +1,4 @@
+<script>$$props;
+</script>
+
+<slot />

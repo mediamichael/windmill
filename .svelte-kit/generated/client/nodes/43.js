@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/approve/[workspace]/[job]/[resume]/[hmac]/+page.svelte";
